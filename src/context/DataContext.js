@@ -10,14 +10,15 @@ export function DataProvider(props){
   const [films,setFilms] = useState([]);
   const [loading,setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   axios
-  //   .get('')
-  //   .then(response => {
-  //     setFilms([...response.data]);
-  //     setLoading(false)
-  //   })
-  // },[])
+  useEffect(() => {
+    axios
+    .get('https://mock-api.bootcamp.respondeai.com.br/api/v1/cineflex/movies')
+    .then(response => {
+      console.log(response)
+      setFilms([...response.data]);
+      setTimeout(() => setLoading(false),500)
+    })
+  },[])
 
   if(loading || films.length === 0){
     return (
@@ -37,20 +38,21 @@ export function DataProvider(props){
       </DataContext.Provider>
     )
   }
-  // return (
-  //   <DataContext.Provider 
-  //     value={
-  //       {
-  //         cart,
-  //         setCart,
-  //         films,
-  //         setFilms,
-  //       }
-  //     }
-  //   >
-  //     {props.children}
-  //   </DataContext.Provider>
-  // )
+  
+  return (
+    <DataContext.Provider 
+      value={
+        {
+          cart,
+          setCart,
+          films,
+          setFilms,
+        }
+      }
+    >
+      {props.children}
+    </DataContext.Provider>
+  )
 }
 
 const Loading = styled.aside`
