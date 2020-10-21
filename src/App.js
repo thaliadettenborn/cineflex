@@ -2,8 +2,9 @@ import React from 'react';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 
 import {DataProvider} from './context/DataContext';
-import Main from './pages/main/Main';
 import Header from './componentsApp/Header';
+import Main from './pages/Main';
+import Sections from './pages/Sections';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         <Switch>
           <Route path='/' exact>
             <Main />
+          </Route>
+          <Route path='/sessoes'>
+            <Sections />
           </Route>
         </Switch>
       </Router>

@@ -15,7 +15,6 @@ export function DataProvider(props){
     axios
     .get('https://mock-api.bootcamp.respondeai.com.br/api/v1/cineflex/movies')
     .then(response => {
-      console.log(response)
       setFilms([...response.data]);
       setTimeout(() => setLoading(false),500)
     })

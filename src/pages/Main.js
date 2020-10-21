@@ -1,10 +1,11 @@
 import React,{useContext} from 'react';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
-import fonts from '../../styles/font';
-import colors from '../../styles/colors';
+import fonts from '../styles/font';
+import colors from '../styles/colors';
 
 
-import DataContext from '../../context/DataContext';
+import DataContext from '../context/DataContext';
 
 export default function Main() {
   const {setCart,films} = useContext(DataContext);
@@ -13,7 +14,13 @@ export default function Main() {
     <Container>
       <h2>Selecione o filme</h2>
       {films.map(f => 
-        <Film src={f.posterURL} />
+        <Link to='/sessoes'>
+          <Film 
+            src={f.posterURL} 
+            onClick={() => setCart(f)}
+            key={f.id}
+          />
+        </Link>
       )}
     </Container>
   )
