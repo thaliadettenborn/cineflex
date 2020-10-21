@@ -1,6 +1,7 @@
 import React,{createContext,useEffect, useState} from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import colors from '../styles/colors';
 
 const DataContext = createContext();
 export default DataContext;
@@ -27,8 +28,7 @@ export function DataProvider(props){
           {
             cart,
             setCart,
-            films,
-            setFilms,
+            films
           }
         }
       >
@@ -45,8 +45,7 @@ export function DataProvider(props){
         {
           cart,
           setCart,
-          films,
-          setFilms,
+          films
         }
       }
     >
@@ -58,7 +57,7 @@ export function DataProvider(props){
 const Loading = styled.aside`
   width: 100vw;
   height: 100vh;
-  background-color: #4a4c57;
+  background-color: ${colors.grayStrong};
   position: fixed;
   top: 0;
   left: 0;

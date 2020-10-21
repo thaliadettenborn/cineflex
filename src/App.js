@@ -3,12 +3,13 @@ import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 
 import {DataProvider} from './context/DataContext';
 import Main from './pages/root/Main';
+import Header from './componentsApp/Header';
 
 function App() {
   return (
     <DataProvider>
       <Router>
-        <h1>Cineflex</h1>
+        <Header />
         <Switch>
           <Route path='/' exact>
             <Main />
