@@ -13,7 +13,9 @@ export default function Header(){
 
 const Logo = styled.header`
   width: 100%;
-  height: 10%;
+  height: 65px;
+  font-size: 35px;
+  font-weight: bolder;
   font-family: ${fonts.familyRoboto};
   background: ${colors.grayStrong};
   position: fixed;
@@ -22,7 +24,7 @@ const Logo = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  letter-spacing: 1.5px;
+  letter-spacing: ${fonts.spacing};
 
   h1{
     color: ${colors.orange};

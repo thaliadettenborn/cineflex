@@ -6,7 +6,8 @@ const colors = {
   greenStrong: "#65AC78",
   yelowSweet: "#fbe192",
   yelowStrong: "#eed16b",
-  white: "#fff"
+  white: "#fff",
+  shadow: "0px 10px 25px 2px rgba(0,0,0,0.75)"
 }
 
 export default colors;

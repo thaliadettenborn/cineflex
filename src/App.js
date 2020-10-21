@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 
 import {DataProvider} from './context/DataContext';
-import Main from './pages/root/Main';
+import Main from './pages/main/Main';
 import Header from './componentsApp/Header';
 
 function App() {
