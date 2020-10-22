@@ -8,18 +8,30 @@ import Section from './componentsPage/Section';
 
 
 export default function Sections() {
-  const {cart} = useContext(DataContext);
+  const {cart,setCart} = useContext(DataContext);
+
+  function selectionSection(idDay,showtime){
+    setCart(
+      {
+        selected: {idDay,showtime},
+        ...cart
+      }
+    )
+  }
 
   if(cart === null) return <label></label>;
+
   return(
     <Container>
       <h2>Selecione o horário</h2>
       {cart.days.map(d => 
         <Section 
           key={d.id}
+          idDay={d.id}
           weekday={d.weekday}
           date={d.date}
           showtimes={d.showtimes}
+          selectionSection={selectionSection}
         />
       )}
     </Container>
