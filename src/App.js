@@ -5,6 +5,7 @@ import {DataProvider} from './context/DataContext';
 import Header from './componentsApp/Header';
 import Main from './pages/Main';
 import Sections from './pages/Sections';
+import Footer from './componentsApp/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           </Route>
           <Route path='/sessoes'>
             <Sections />
+            <Footer />
           </Route>
         </Switch>
       </Router>

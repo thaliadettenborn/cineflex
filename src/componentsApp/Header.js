@@ -25,6 +25,7 @@ const Logo = styled.header`
   justify-content: center;
   align-items: center;
   letter-spacing: ${fonts.spacing};
+  box-shadow: ${colors.shadowLittle};
 
   h1{
     color: ${colors.orange};
