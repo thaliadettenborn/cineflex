@@ -4,16 +4,16 @@ import styled from 'styled-components';
 import fonts from '../styles/font';
 import colors from '../styles/colors';
 import DataContext from '../context/DataContext';
-import Session from './componentsPage/Section';
+import Session from './componentsPage/Session';
 
 
 export default function Sessions() {
   const {cart,setCart} = useContext(DataContext);
 
-  function selectionSection(idDay,showtime){
+  function selectionSection(session,showtime){
     setCart(
       {
-        selected: {idDay,showtime},
+        selected: {session,showtime},
         ...cart
       }
     )
@@ -25,9 +25,8 @@ export default function Sessions() {
     <Container>
       <h2>Selecione o horário</h2>
       {cart.days.map(d => 
-        <Section 
+        <Session 
           key={d.id}
-          idDay={d.id}
           weekday={d.weekday}
           date={d.date}
           showtimes={d.showtimes}

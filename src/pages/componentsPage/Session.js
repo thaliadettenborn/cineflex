@@ -6,7 +6,7 @@ import fonts from '../../styles/font';
 import colors from '../../styles/colors';
 
 export default function Session(props) {
-  const {weekday,date,showtimes,selectionSection,idDay} = props;
+  const {weekday,date,showtimes,selectionSection} = props;
 
   return (
     <Container>
@@ -14,7 +14,9 @@ export default function Session(props) {
       {showtimes.map(showtime =>
           <button
             key={showtime.key}
-            onClick={() => selectionSection(idDay,{...showtime})}
+            onClick={() => 
+              selectionSection(`${weekday} - ${showtime.name}`,{...showtime})
+            }
           >
             <Link to='/assentos'>{showtime.name}</Link>
           </button>

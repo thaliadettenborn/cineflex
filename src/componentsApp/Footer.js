@@ -24,8 +24,10 @@ export default function Footer(props) {
   return(
     <Container>
       <Image src={cart.posterURL}/>
-      <h3>{cart.title}</h3>
-      <h3>{cart.sectionSelectd}</h3>
+      <div>
+        <h3>{cart.title}</h3>
+        <h4>{cart.selected ? cart.selected.session : ''}</h4>
+      </div>
     </Container>
   )
 }
@@ -36,19 +38,24 @@ const Container = styled.footer`
   position: fixed;
   bottom: 0;
   left: 0;
-  padding: 10px 30px;
+  padding: 10px;
   background: ${colors.graySweet};
   display: flex;
   align-items: center;
   box-shadow: ${colors.shadow};
 
-  h3{
+  h3,h4{
+    margin-left: 10px;
     font-family: ${fonts.familyRoboto};
-    letter-spacing: ${fonts.spacing}
+    letter-spacing: ${fonts.spacing};
     color: ${colors.grayStrong};
-    margin-left: 20px;
     text-transform: capitalize;
+  }
+  h3{
     font-weight: 500;
+  }
+  h4{
+    margin-top: 5px;
   }
   .icon{
     font-size: 30px;
