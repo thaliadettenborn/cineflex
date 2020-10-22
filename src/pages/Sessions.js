@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import fonts from '../styles/font';
 import colors from '../styles/colors';
 import DataContext from '../context/DataContext';
-import Section from './componentsPage/Section';
+import Session from './componentsPage/Section';
 
 
-export default function Sections() {
+export default function Sessions() {
   const {cart,setCart} = useContext(DataContext);
 
   function selectionSection(idDay,showtime){

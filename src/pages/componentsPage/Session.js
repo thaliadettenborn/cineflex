@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import fonts from '../../styles/font';
 import colors from '../../styles/colors';
 
-export default function Section(props) {
+export default function Session(props) {
   const {weekday,date,showtimes,selectionSection,idDay} = props;
 
   return (
