@@ -8,6 +8,7 @@ import Sessions from './pages/Sessions';
 import Footer from './componentsApp/Footer';
 import Seats from './pages/Seats';
 import Client from './pages/Client';
+import Sucess from './pages/Sucess';
 
 function App() {
   return (
@@ -33,6 +34,10 @@ function App() {
           <Route path='/cliente'>
             <Client />
             <Footer />
+          </Route>
+          
+          <Route path='/sucesso'>
+            <Sucess />
           </Route>
         </Switch>
       </Router>

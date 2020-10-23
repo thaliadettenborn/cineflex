@@ -1,16 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import fonts from '../../styles/font';
 import colors from '../../styles/colors';
 
 export default function FormItems(props) {
-  const {htmlFor,labelText,type} = props;
+  const {htmlFor,labelText,type,count} = props;
 
   if(type === 'radio'){
     return (
       <ContainerRadio>
-        <input type={type} id={htmlFor} />
+        <input required type={type} id={htmlFor} name={`ticket${count}`} value={htmlFor} />
         <label htmlFor={htmlFor}>{labelText}</label>
       </ContainerRadio>
     )
@@ -18,7 +17,7 @@ export default function FormItems(props) {
   return(
     <Container>
       <label htmlFor={htmlFor}>{labelText}</label>
-      <input type={type} id={htmlFor} />
+      <input type={type} id={htmlFor} required />
     </Container>
   )
 };

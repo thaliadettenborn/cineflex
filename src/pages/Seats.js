@@ -20,7 +20,6 @@ export default function Seats() {
   function selectionSeat(item){
     if(!(item.isAvailable)) alert("Esse assento não está disponível");
     else {
-      console.log(isSelected(item))
       isSelected(item) 
         ? cart.selected.seatsSelected = cart.selected.seatsSelected.filter(s => s.id !== item.id)
         : cart.selected.seatsSelected.push(item);
