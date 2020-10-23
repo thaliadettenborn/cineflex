@@ -58,7 +58,7 @@ Version Control:<br>
 
 The application layout is available on Vercel:
 
-[https://img.shields.io/badge/vercel%20-%23000000.svg?&style=for-the-badge&logo=vercel&logoColor=white](https://09-cineflex.vercel.app/)
+<a href='https://09-cineflex.vercel.app/'><img src='https://img.shields.io/badge/vercel%20-%23000000.svg?&style=for-the-badge&logo=vercel&logoColor=white'></a>
 
 
 ### Contributors
