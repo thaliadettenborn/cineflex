@@ -26,7 +26,7 @@ export default function LabelSeats() {
 const ContainerLabel = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin: 20px 0;
   width: 100%;
   padding: 0 10px;
 
@@ -36,12 +36,12 @@ const ContainerLabel = styled.div`
     justify-content: flex-start;
     align-items: center;
     font-family: ${fonts.familyRoboto};
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 400;
   }
   input{
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     border-radius: 10px;
     flex-shrink: 0;
     margin-right: 10px;

@@ -8,7 +8,6 @@ import DataContext from '../context/DataContext';
 
 export default function Seats() {
   const {cart,setCart} = useContext(DataContext);
-  
 
   if(cart === null || cart.selected === null){
     return <label></label>
@@ -32,8 +31,12 @@ export default function Seats() {
     return cart.selected.seatsSelected.includes(seat);
   }
 
+  function submitBooking(event){
+    event.preventDefault();
+  }
+
   return(
-    <Container>
+    <Container onSubmit={submitBooking}>
       <h2>Selecione o(s) assento(s)</h2>
       <ContainerSeats>
         {seats.map(seat =>
@@ -51,11 +54,12 @@ export default function Seats() {
         )}
       </ContainerSeats>
       <LabelSeats />
+      <button type='submit'>Reservar assento(s)</button>
     </Container>
   )
 };
 
-const Container = styled.section`
+const Container = styled.form`
   width: 100%;
   margin: 70px 0 90px 0;
   padding: 0px 10px;
@@ -63,14 +67,23 @@ const Container = styled.section`
   justify-content: space-evenly;
   flex-wrap: wrap;
   text-align: center;
+  font-family: ${fonts.familyRoboto};
 
   h2{
-    font-family: ${fonts.familyRoboto};
     color: ${colors.grayStrong};
     width: 100%;
     font-size: 20px;
     margin: 15px 0;
     font-weight: bold;
+  }
+  button{
+    width: 180px;
+    height: 40px;
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+    background: ${colors.orange};
+    color: ${colors.white};
   }
 `;
 
@@ -81,7 +94,7 @@ const ContainerSeats = styled.div`
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  height: 300px;
+  height: 260px;
   padding: 10px;
   border-radius: 10px;
 
@@ -93,7 +106,7 @@ const ContainerSeats = styled.div`
     margin: 1px;
     box-shadow: ${colors.shadowLittle};
     border: 1px solid;
-    font-family: ${fonts.familyRoboto};
+    font-family: inherit;
     font-weight: 500;
     font-size: 12px;
     color: ${colors.grayStrong}
