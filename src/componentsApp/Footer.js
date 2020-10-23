@@ -1,14 +1,16 @@
 import React,{useContext} from 'react';
 import styled from 'styled-components';
 import { FaArrowAltCircleLeft } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation,useHistory } from 'react-router-dom';
 
 import fonts from '../styles/font';
 import colors from '../styles/colors';
 import DataContext from '../context/DataContext';
 
 export default function Footer(props) {
-  const {cart} = useContext(DataContext);
+  const {cart,setCart} = useContext(DataContext);
+  const {pathname} = useLocation();
+  const history = useHistory();
 
   if(cart === null){
     return (
@@ -21,6 +23,21 @@ export default function Footer(props) {
     )
   }
 
+  function returnPage(){
+    if(pathname === '/sessoes'){
+      setCart(null);
+      history.push('/')
+    }else if(pathname === '/assentos'){
+      cart.selected = {};
+      setCart({...cart});
+      history.push('/sessoes');
+    }else if(pathname === '/cliente'){
+      cart.selected.seatsSelected = [];
+      setCart({...cart});
+      history.push('/assentos');
+    }
+  }
+
   return(
     <Container>
       <Image src={cart.posterURL}/>
@@ -28,6 +45,7 @@ export default function Footer(props) {
         <h3>{cart.title}</h3>
         <h4>{cart.selected ? cart.selected.session : ''}</h4>
       </div>
+      <FaArrowAltCircleLeft className='back-page' onClick={returnPage} />
     </Container>
   )
 }
@@ -60,6 +78,13 @@ const Container = styled.footer`
   .icon{
     font-size: 30px;
     margin-right: 5px;
+    color: ${colors.orange};
+  }
+  .back-page{
+    font-size: 20px;
+    position: fixed;
+    right: 15px;
+    bottom: calc((85px - 20px) / 2);
     color: ${colors.orange};
   }
 `
