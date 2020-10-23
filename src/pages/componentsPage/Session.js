@@ -15,7 +15,7 @@ export default function Session(props) {
           <button
             key={showtime.key}
             onClick={() => 
-              selectionSection(`${weekday} - ${showtime.name}`,{...showtime})
+              selectionSection(`${weekday} - ${showtime.name}`,date,{...showtime})
             }
           >
             <Link to='/assentos'>{showtime.name}</Link>

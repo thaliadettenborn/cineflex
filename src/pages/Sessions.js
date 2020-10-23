@@ -10,10 +10,10 @@ import Session from './componentsPage/Session';
 export default function Sessions() {
   const {cart,setCart} = useContext(DataContext);
 
-  function selectionSection(session,showtime){
+  function selectionSection(session,date,showtime){
     setCart(
       {
-        selected: {session,showtime,seatsSelected: []},
+        selected: {session,date,showtime,seatsSelected: []},
         ...cart
       }
     )

@@ -9,7 +9,6 @@ import DataContext from '../context/DataContext';
 
 export default function Main() {
   const {setCart,films} = useContext(DataContext);
-
   return(
     <Container>
       <h2>Selecione o filme</h2>

@@ -25,6 +25,7 @@ export default function Client() {
     const tickets = seatsSelected.map((seat,i) => {
       return {
         id: seat.id,
+        name: seat.name,
         value: event.target.elements[`ticket${i+1}`].value
       }
     })
