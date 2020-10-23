@@ -7,13 +7,31 @@ import LabelSeats from './componentsPage/LabelSeats';
 import DataContext from '../context/DataContext';
 
 export default function Seats() {
-  const {cart} = useContext(DataContext);
+  const {cart,setCart} = useContext(DataContext);
+  
 
   if(cart === null || cart.selected === null){
     return <label></label>
   }
+  
+  let {seats} = cart.selected.showtime;
 
-  const {seats} = cart.selected.showtime;
+  function selectionSeat(item){
+    if(!(item.isAvailable)) alert("Esse assento não está disponível");
+    else {
+      console.log(isSelected(item))
+      isSelected(item) 
+        ? cart.selected.seatsSelected = cart.selected.seatsSelected.filter(s => s.id !== item.id)
+        : cart.selected.seatsSelected.push(item);
+      
+      setCart({...cart})
+    }
+  }
+
+  function isSelected(seat){
+    return cart.selected.seatsSelected.includes(seat);
+  }
+
   return(
     <Container>
       <h2>Selecione o(s) assento(s)</h2>
@@ -24,10 +42,11 @@ export default function Seats() {
             value={seat.name}
             key={seat.id}
             className={
-              seat.isAvailable 
-                ? "available"
-                : "unavailable"
+              isSelected(seat)
+                ? "selected"
+                : (seat.isAvailable ? "available" : "unavailable")
             }
+            onClick={() => selectionSeat(seat)}
           />
         )}
       </ContainerSeats>
@@ -86,5 +105,9 @@ const ContainerSeats = styled.div`
   input.available{
     background-color: ${colors.graySweet};
     border-color: ${colors.grayStrong};
+  }
+  input.selected{
+    background-color: ${colors.greenSweet};
+    border-color: ${colors.greenStrong};
   }
 `;  

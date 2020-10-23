@@ -13,7 +13,7 @@ export default function Sessions() {
   function selectionSection(session,showtime){
     setCart(
       {
-        selected: {session,showtime},
+        selected: {session,showtime,seatsSelected: []},
         ...cart
       }
     )
