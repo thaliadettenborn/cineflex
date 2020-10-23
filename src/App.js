@@ -6,7 +6,8 @@ import Header from './componentsApp/Header';
 import Main from './pages/Main';
 import Sessions from './pages/Sessions';
 import Footer from './componentsApp/Footer';
-import Seats from './pages/Seats'
+import Seats from './pages/Seats';
+import Client from './pages/Client';
 
 function App() {
   return (
@@ -26,6 +27,11 @@ function App() {
 
           <Route path='/assentos'>
             <Seats />
+            <Footer />
+          </Route>
+
+          <Route path='/cliente'>
+            <Client />
             <Footer />
           </Route>
         </Switch>

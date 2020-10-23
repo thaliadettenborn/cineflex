@@ -1,5 +1,6 @@
 import React,{useContext} from 'react';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 import fonts from '../styles/font';
 import colors from '../styles/colors';
@@ -13,7 +14,8 @@ export default function Seats() {
     return <label></label>
   }
   
-  let {seats} = cart.selected.showtime;
+  const {seats} = cart.selected.showtime;
+  const quantitySeats = cart.selected.seatsSelected.length;
 
   function selectionSeat(item){
     if(!(item.isAvailable)) alert("Esse assento não está disponível");
@@ -31,12 +33,8 @@ export default function Seats() {
     return cart.selected.seatsSelected.includes(seat);
   }
 
-  function submitBooking(event){
-    event.preventDefault();
-  }
-
   return(
-    <Container onSubmit={submitBooking}>
+    <Container>
       <h2>Selecione o(s) assento(s)</h2>
       <ContainerSeats>
         {seats.map(seat =>
@@ -54,12 +52,12 @@ export default function Seats() {
         )}
       </ContainerSeats>
       <LabelSeats />
-      <button type='submit'>Reservar assento(s)</button>
+      <Link to={quantitySeats && '/cliente'}>Reservar assento(s)</Link>
     </Container>
   )
 };
 
-const Container = styled.form`
+const Container = styled.div`
   width: 100%;
   margin: 70px 0 90px 0;
   padding: 0px 10px;
@@ -76,10 +74,13 @@ const Container = styled.form`
     margin: 15px 0;
     font-weight: bold;
   }
-  button{
+  a{
     width: 180px;
     height: 40px;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 16px;
     border-radius: 10px;
     background: ${colors.orange};
