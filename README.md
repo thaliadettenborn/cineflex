@@ -33,10 +33,10 @@ Languages:<br>
     <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
     <img scr='https://img.shields.io/badge/jsx%20-%2320232a.svg?&style=for-the-badge&logo=jsx&logoColor=%2361DAFB'>
     <img src="https://img.shields.io/badge/markdown-%23000000.svg?&style=for-the-badge&logo=markdown&logoColor=white"/>
-<br><br>
+</p>
 
-<br><br>
 The following tools and frameworks were used in the construction of the project:<br>
+<p align="center">
     <img src="https://img.shields.io/badge/react-app%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
     <img src="https://img.shields.io/badge/react_router%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
     <img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
@@ -46,9 +46,10 @@ The following tools and frameworks were used in the construction of the project:
     <img src='https://img.shields.io/badge/yarn%20-%2320232a.svg?&style=for-the-badge&logo=yarn&logoColor=%2361DAFB'>
     <img src='https://img.shields.io/badge/react-icon%20-%2320232a.svg?&style=for-the-badge&logo=react-icon&logoColor=%2361DAFB'>
     <img src='https://img.shields.io/badge/styled-components%20-%2320232a.svg?&style=for-the-badge&logo=styled-components&logoColor=%2361DAFB'>
+</p>
 
-<br><br>
 Version Control:<br>
+<p align="center">
     <img src="https://img.shields.io/badge/git%20-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white"/>
     <img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
 </p>
