@@ -46,7 +46,6 @@ const Film = styled.img`
   height: 160px;
   border: 5px solid white;
   margin: 15px;
-  background-color: blue;
   flex-shrink: 0;
   box-shadow: ${colors.shadow};
   -webkit-box-shadow: ${colors.shadow};
