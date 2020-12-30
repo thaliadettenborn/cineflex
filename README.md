@@ -67,6 +67,7 @@ The application layout is available on Vercel:
 <table>
   <tr>
     <td align="center"><a href="https://github.com/responde-ai"><img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/40724166?s=200&v=4" width="100px;" alt=""/><br /><sub><b>Responde Aí</b></sub></a><br />
+  </tr>
 </table>
 
 
