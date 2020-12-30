@@ -4,8 +4,10 @@
 
 # Cineflex
 
+![license](https://img.shields.io/github/license/thaliadettenborn/cineflex?style=flat-square) ![total lines](https://img.shields.io/tokei/lines/github/thaliadettenborn/cineflex) ![last commit](https://img.shields.io/github/last-commit/thaliadettenborn/cineflex?style=flat-square) ![issues](https://img.shields.io/github/package-json/v/thaliadettenborn/cineflex?style=flat-square) ![forks](https://img.shields.io/github/forks/thaliadettenborn/cineflex?style=flat-square)
+
 ## About
-<p>
+<p align='center'>
   Cineflex is a Single-Page Application project for a cinema, using React, where the client can see the films in theaters and reserve seats.
 </p>
 
@@ -54,7 +56,7 @@ Version Control:<br>
     <img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
 </p>
 
-# Deploy
+### Deploy
 
 The application layout is available on Vercel:
 
@@ -75,6 +77,6 @@ The application layout is available on Vercel:
 <img src="https://avatars0.githubusercontent.com/u/70967247?s=460&u=0684339f0717ae41ce18689351f0215fdf270590&v=4" width="100px;" style="border-radius: 50%;"/>
 <br>
 Made by Thalia Dettenborn 👋🏽 Get in Touch!<br><br>
-<a href="https://www.linkedin.com/in/thaliarobertad/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> 
+<a href="https://www.linkedin.com/in/thaliarobertadettenborn/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> 
 <a href="mailto:thalia.born@gmail.com"><img src="https://img.shields.io/badge/gmail-D14836?&style=for-the-badge&logo=gmail&logoColor=white"/></a>
 <a href="https://github.com/thaliadettenborn"><img src="https://img.shields.io/badge/github-%23100000.svg?&style=for-the-badge&logo=github&logoColor=white" /></a>
