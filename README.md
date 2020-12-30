@@ -64,11 +64,10 @@ The application layout is available on Vercel:
 
 
 ### Contributors
-<a href="https://www.respondeai.com.br/">
-<img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/69740567?s=60&v=4" width="100px;"/>
-<br>
-<sub><b>Responde Aí</b></sub>
-</a>
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/responde-ai"><img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/40724166?s=200&v=4" width="100px;" alt=""/><br /><sub><b>Responde Aí</b></sub></a><br />
+</table>
 
 
 ### Author
